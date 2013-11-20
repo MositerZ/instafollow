@@ -50,7 +50,7 @@ while 1 < 100
         user_count = user_count + 1
         puts "Followed Users:".green
         puts user_count
-        sleep 10
+        sleep 300
       
 # unfollowing each user
 
