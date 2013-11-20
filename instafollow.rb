@@ -16,9 +16,11 @@ end
 # defining tags to grab pictures to like from
 
 selected_tags = %w(
-                  dog
-                  beach
-                  sunset
+                  follow
+                  followme
+                  follow4follow
+                  followforfollow
+                  followback
 )
 
 # tokens to rotate through
@@ -27,9 +29,9 @@ selected_tags = %w(
 	#3	webstagram
 
 access_tokens = %w(
-			ACCESS_TOKEN
-			ACCESS_TOKEN
-			ACCESS_TOKEN
+				ACCESS_TOKEN
+				ACCESS_TOKEN
+				ACCESS_TOKEN		
 ) 
 
 while 1 < 100
@@ -40,7 +42,7 @@ while 1 < 100
   
 # getting the 60 most recent photos from each tag
 
-    photos = Instagram.tag_recent_media(tag, {count: 60})
+    photos = Instagram.tag_recent_media(tag, {count: 10})
     photos.each do |photo|
     
 # following each user
@@ -50,12 +52,28 @@ while 1 < 100
         user_count = user_count + 1
         puts "Followed Users:".green
         puts user_count
-        sleep 300
-      
+          time2 = Time.now
+        
+# sleeping program
+				
+			puts "Sleeping for 5 minutes."
+			puts "Current Time : " + time2.inspect
+				sleep 60
+			puts "4 minutes remaining."
+				sleep 60
+			puts "3 minutes remaining."
+				sleep 60
+			puts "2 minute remaining."
+				sleep 60
+			puts "1 minute remaining."
+				sleep 60
+              
 # unfollowing each user
 
       Instagram.unfollow_user(photo.user.id)
       puts "Unfollowed User".yellow
+      puts "Following in 15 seconds..."
+      sleep 15
       
 # rescuing if necessary
 
@@ -79,6 +97,7 @@ end
 end
 end
 end
+
 
 
 
