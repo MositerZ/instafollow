@@ -21,6 +21,17 @@ selected_tags = %w(
                   sunset
 )
 
+# tokens to rotate through
+	#1	unfollowgram
+	#2	instunfollow
+	#3	webstagram
+
+access_tokens = %w(
+			ACCESS_TOKEN
+			ACCESS_TOKEN
+			ACCESS_TOKEN
+) 
+
 while 1 < 100
   
 # looping through each tag
@@ -48,20 +59,26 @@ while 1 < 100
       
 # rescuing if necessary
 
-      rescue Exception => e  
-	    error_count = error_count + 1
-	    puts e.message.red
-	    if error_count%2 == 0  
-		  puts 'Error! Retry has failed, waiting ten minutes'.red
-		  sleep 600
+      			rescue Exception => e  
+	      			error_count = error_count + 1
+	      				puts e.message.red 
+	      			if error_count%2 == 0  
+	        			token = access_tokens.first 
+		      			puts "Error! Retry has failed, switching tokens #{token}".red
+		      
+# rotating the access tokens to outsmart Instagram
 
+          			Instagram.configure do |config|
+            		config.access_token = token
+          		end
+          
+          		access_tokens.rotate!
 
-        end
-      end
-    end
-  end
 end
-
+end
+end
+end
+end
 
 
 
