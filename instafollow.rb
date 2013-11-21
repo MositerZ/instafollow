@@ -63,7 +63,7 @@ while 1 < 100
 				sleep 60
 			puts "3 minutes remaining."
 				sleep 60
-			puts "2 minute remaining."
+			puts "2 minutes remaining."
 				sleep 60
 			puts "1 minute remaining."
 				sleep 60
