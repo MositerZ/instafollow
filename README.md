@@ -5,4 +5,12 @@
 ### Tips    
 > Instafollow will not run when a computer is off. Make sure your machine is plugged in and does not go to sleep while running the program.  I also suggest using the *15* second break after each unfollow to quit your program. This will prohibit the build up of unknown followed users.  
 ### Statistics  
-> I am currently looking into the percent statistics of Instafollow so they will appear here some time in the near future. 
+> Below are the program averages of Instafollow.  
+>> ##### Followers gained  
+**18.50** per hour  
+**444** per day  
+**8.37%** of users follow back  
+>> ##### Likes recieved  
+**25.73** per hour  
+**617** per day  
+**11.71%** of users like a photo
