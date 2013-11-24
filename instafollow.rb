@@ -21,31 +21,30 @@ selected_tags = %w(
                   follow4follow
                   followforfollow
                   followback
-)
+                )
 
 # tokens to rotate through
-	#1	unfollowgram
-	#2	instunfollow
-	#3	webstagram
+  #1  unfollowgram
+  #2  instunfollow
+  #3  webstagram
 
 access_tokens = %w(
-				ACCESS_TOKEN
-				ACCESS_TOKEN
-				ACCESS_TOKEN		
-) 
+                  ACCESS_TOKEN
+                  ACCESS_TOKEN
+                  ACCESS_TOKEN
+                ) 
 
 while 1 < 100
 
-# looping through each tag
-
+  # looping through each tag
   selected_tags.each do |tag|
 
-# getting the 60 most recent photos from each tag
+    # getting the 60 most recent photos from each tag
 
     photos = Instagram.tag_recent_media(tag, {count: 10})
     photos.each do |photo|
-# following each user
 
+      # following each user
       begin
         Instagram.follow_user(photo.user.id)
         user_count = user_count + 1
@@ -53,8 +52,7 @@ while 1 < 100
         puts user_count
         time2 = Time.now
 
-# sleeping program
-
+        # sleeping program
         puts "Sleeping for 5 minutes."
         puts "Current Time : " + time2.inspect
         sleep 60
@@ -66,15 +64,14 @@ while 1 < 100
         sleep 60
         puts "1 minute remaining."
         sleep 60
-# unfollowing each user
 
+        # unfollowing each user
         Instagram.unfollow_user(photo.user.id)
         puts "Unfollowed User".yellow
         puts "Following in 15 seconds..."
         sleep 15
 
-# rescuing if necessary
-
+      # rescuing if necessary
       rescue Exception => e  
         error_count = error_count + 1
         puts e.message.red 
@@ -82,8 +79,7 @@ while 1 < 100
           token = access_tokens.first 
           puts "Error! Retry has failed, switching tokens #{token}".red
 
-# rotating the access tokens to outsmart Instagram
-
+          # rotating the access tokens to outsmart Instagram
           Instagram.configure do |config|
             config.access_token = token
           end
@@ -93,7 +89,3 @@ while 1 < 100
     end
   end
 end
-
-
-
-
