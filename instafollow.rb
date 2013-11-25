@@ -77,25 +77,25 @@ while 1 < 100
       
 # rescuing if necessary
 
-      			rescue Exception => e  
-	      			error_count = error_count + 1
-	      				puts e.message.red 
-	      			if error_count%2 == 0  
-	        			token = access_tokens.first 
-		      			puts "Error! Retry has failed, switching tokens #{token}".red
+        rescue Exception => e  
+	      error_count = error_count + 1
+	      puts e.message.red 
+	    if error_count%2 == 0  
+	      token = access_tokens.first 
+		  puts "Error! Retry has failed, switching tokens #{token}".red
 		      
 # rotating the access tokens to outsmart Instagram
 
-          			Instagram.configure do |config|
-            		config.access_token = token
-          		end
+            Instagram.configure do |config|
+              config.access_token = token
+          	end
           
           		access_tokens.rotate!
 
-end
-end
-end
-end
+        end
+      end
+    end
+  end
 end
 
 
