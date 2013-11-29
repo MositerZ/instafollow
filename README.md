@@ -7,10 +7,10 @@
 ### Statistics  
 > Below are the program averages of Instafollow.  
 >> ##### Followers gained  
-**18.50** per hour  
-**444** per day  
-**8.37%** of users follow back  
+**10.81** per hour  
+**259** per day  
+**9.00%** of users follow back  
 >> ##### Likes recieved  
-**25.73** per hour  
-**617** per day  
-**11.71%** of users like a photo
+**16.02** per hour  
+**384** per day  
+**13.35%** of users like a photo
