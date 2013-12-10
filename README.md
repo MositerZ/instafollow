@@ -1,5 +1,5 @@
 # Instafollow  
-> Instafollow is a fully automated Instagram bot to follow and later unfollow specified users from an authenticated user's account.  
+> Instafollow is a fully automated Instagram program to follow and later unfollow specified users from an authenticated user's account.  
 ### Usage  
 > Instafollow runs best when it is open in multiple terminal tabs. The approximate number of target accounts hit per hour can be reached by multiplying the amount of open tabs by **12**. Due to the *160* requests limit moderately enforced by Instagram, I recommend having a maximum of **20** tabs running Instafollow at once. This would result in a rough maximum of **240** accounts reached per hour.   
 ### Tips    
