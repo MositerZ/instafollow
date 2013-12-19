@@ -13,4 +13,5 @@
 >> ##### Likes recieved  
 **16.23** per hour  
 **389** per day  
-**13.52%** of users like a photo
+**13.52%** of users like a photo  
+***Statistics based on 20 program trials.***
